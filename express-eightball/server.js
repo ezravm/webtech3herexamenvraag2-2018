@@ -42,16 +42,12 @@ app.get('/delete', (req, res) => {
 // Find a question
 app.post('/ask', (req, res) => {
  var query = req.body.question
- console.log(query);
 
 
 
 if (localStorage.getItem(query) == null) {
   var random = getRandomInt(20);
-  console.log(random);
-  console.log("data uit array:");
   var store = answers[random];
-  console.log(store);
   localStorage.setItem(query,store);
   res.render('answer.ejs',{answer: store} )
 }
