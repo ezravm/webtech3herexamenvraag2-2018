@@ -19,7 +19,7 @@ if (typeof localStorage === "undefined" || localStorage === null) {
   localStorage = new LocalStorage('./scratch');
 }
 
-var answers = ["it is certain", "as i see it, yes", "reply hazy, try again", "dont count on it"];
+var answers = ["it is certain","it is decidedly so","without a doubt", "yes - definitely","you may rely on it", "as i see it, yes", "most likely", "outlook good", "yes", "signs point to yes", "ask again later", "better not tell you now", "cannot predict now", "concentrate and ask again", "my reply is no", "my sources say no", "outlook not so good", "very doubtful", "reply hazy, try again", "dont count on it"];
 
 
 // Redirect to ask
@@ -32,6 +32,12 @@ app.get('/ask', (req, res) => {
    res.render('ask.ejs', { product: '' })
 })
 
+app.get('/delete', (req, res) => {
+  localStorage.clear();
+   res.redirect('/ask')
+})
+
+
 
 // Find a question
 app.post('/ask', (req, res) => {
@@ -41,7 +47,7 @@ app.post('/ask', (req, res) => {
 
 
 if (localStorage.getItem(query) == null) {
-  var random = getRandomInt(3);
+  var random = getRandomInt(20);
   console.log(random);
   console.log("data uit array:");
   var store = answers[random];

@@ -6,13 +6,18 @@
   <link rel='stylesheet' href='styles.css'>
 </head>
 <body>
-  <h2>Result</h2>
-  <p class='product'>
-    <span><%= answer%></span>
+  <h2>The definitive answer to your question</h2>
+  <p>
+    <h1><%= answer%></h1>
   </p>
 
   <form action='/ask' method='GET'>
-    <button type='submit'>Terug</button>
+    <button type='submit'>Ask another question</button>
+  </form>
+
+<br>
+  <form action='/delete' method='GET'>
+    <button type='submit'>clear answers</button>
   </form>
 
 </body>
