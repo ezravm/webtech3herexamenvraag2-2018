@@ -1,7 +1,5 @@
-# Repo for Zell's CRUD, Express and MongoDB tutorial
+# Repo for Ezra's Express exam
 
-- [Demo](https://crud-express-mongo.herokuapp.com)
-- [Tutorial](http://zell-weekeat.com/crud-express-mongodb)
 
 ## Installation
 
@@ -10,6 +8,6 @@
 
 ## Usage 
 
-1. run `npm run dev`
+1. run `npm start serve`
 2. Navigate to `localhost:3000`
 3. Have fun ;)
